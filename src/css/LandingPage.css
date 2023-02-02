@@ -1,0 +1,24 @@
+.landing-container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.titles{
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    text-align: center; 
+}
+.features{
+    color:white;
+}
+.bob{
+   background-color: #04AA6D;;
+   border: none;
+}
+.bob:hover{
+    background-color: #04AA6D;
+    opacity: 0.8;
+}
