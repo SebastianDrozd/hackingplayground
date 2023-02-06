@@ -20,7 +20,7 @@ const Login = () => {
         loginUser(user).then(res => {
             console.log("response data",res.data)
             dispatch(setLoggedIn(res.data))
-            navigate("/dashboard")
+            navigate("/home")
         }).catch(err => {
             if(err.response.status == 401){
                 setPasswordErr(true)

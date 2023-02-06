@@ -3,11 +3,14 @@
     padding: 0;
     width: 200px;
     background-color: #f1f1f1;
-    position: fixed;
-    height: 100%;
+    position: absolute;
+    height: 100vh;
     overflow: auto;
   }
-  
+  .links{
+    margin: 0;
+    padding: 0;
+  }
   /* Sidebar links */
   .sidebar a {
     display: block;
@@ -20,6 +23,9 @@
   .sidebar a.active {
     background-color: #04AA6D;
     color: white;
+  }
+  .sidebar a:hover{
+    cursor: pointer;
   }
   
   /* Links on mouse-over */

@@ -1,0 +1,23 @@
+.hackmachine-info-container{
+    padding: 1em;
+}
+.hacker{
+    height: 100% !important;
+}
+.parrot-container{
+    padding: 1em;
+    margin-left:  5em;
+    margin-top: 2em;
+}
+.key-div{
+    display: flex;
+   align-items: flex-start;
+    justify-content: center;
+}
+.key-div input{
+    width: 20%;
+    height: 2.5em;
+}
+.key-div button{
+    height: 2.5em !important;
+}

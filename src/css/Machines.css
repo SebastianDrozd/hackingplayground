@@ -1,0 +1,34 @@
+.machine-container{
+    padding: 1em;
+}
+.machine-notice-container{
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.43);
+    width: 50%;
+    height: 25em;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1em;
+}
+ol{
+
+}
+ol li{
+    font-weight: 300;
+    padding: 1em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.116);
+}
+.last{
+    border-bottom: none;
+    list-style: none;
+}
+.machine-description{
+    font-weight: 300;
+    font-size: 1.2em;
+    padding: 1em;
+}
+.machine-badge{
+
+}
+.single-li{
+    padding: 1em;
+}
