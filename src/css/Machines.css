@@ -32,3 +32,6 @@ ol li{
 .single-li{
     padding: 1em;
 }
+.babe{
+    min-width: 5em !important;
+}

@@ -21,7 +21,7 @@ const SingleMachine = (props) => {
                     <p className='machine-description'>{machine.description}</p>
                     <button onClick={handleMachine} className='btn btn-primary'>Hack me</button>
                 </div>
-                <span className={`badge rounded-pill machine-badge ${color}`}>{machine.difficulty}</span>
+                <span className={`badge rounded-pill machine-badge ${color} babe`}>{machine.difficulty}</span>
             </li>
         </>
     )

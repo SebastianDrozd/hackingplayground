@@ -20,6 +20,7 @@ const Login = () => {
         loginUser(user).then(res => {
             console.log("response data",res.data)
             dispatch(setLoggedIn(res.data))
+            localStorage.setItem("token",res.data.token)
             navigate("/home")
         }).catch(err => {
             if(err.response.status == 401){
@@ -52,7 +53,7 @@ const Login = () => {
                 <button onClick={handleLogin} className="registerbtn">Login</button>
             </div>
             <div className="container signin">
-                <p>Dont' have an account? <Link to="/login">Signup</Link></p>
+                <p>Dont' have an account? <Link to="/signup">Signup</Link></p>
                 
             </div>
     </>

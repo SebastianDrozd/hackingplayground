@@ -4,7 +4,8 @@ const initialState = {
     loggedIn: false,
     token: "",
     email: "",
-    id : ""
+    id : "",
+    points : 0
 }
 export const userSlice = createSlice({
     name: 'user',
@@ -16,6 +17,7 @@ export const userSlice = createSlice({
             state.email = action.payload.email
             state.token = action.payload.token
             state.id = action.payload.id
+            state.points = action.payload.points
         }    
     }
 })

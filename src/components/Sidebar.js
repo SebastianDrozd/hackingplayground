@@ -15,8 +15,7 @@ const Sidebar = () => {
                 
                 <a class="active" onClick={handleHome} >Home</a>
                 <a onClick={handleMachines} >Machines</a>
-                <a href="#contact">Contact</a>
-                <a href="#about">About</a>
+            
             </div>
         </>
     )

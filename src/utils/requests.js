@@ -19,8 +19,11 @@ export const registerUser = (user) => {
  }
 
  export const startHackMachine = (name) => {
+   if(name == "Easiest Machine Ever"){
+      name = "EasiestMachineEver"
+   }
      console.log(name)
-      return axios.get(`http://localhost:2500/api/v1/virtualmachines/start/${name}`)
+      return axios.get(`http://10.0.0.171:2500/api/v1/virtualmachines/start/${name}`)
  }
 
  export const startParrotInstance = () => {
@@ -38,9 +41,26 @@ export const registerUser = (user) => {
 
  export const setRecentMachines = (jwt,machineid, userid) => {
    let obj = {machineid: machineid, userid: userid}
-   return axios.post("http://localhost:4000/api/v1/machines/recents",{
+   console.log("this is object that will be sent", obj)
+   return axios.post("http://localhost:4000/api/v1/machines/recents",obj,{
       headers: { 
           Authorization: `Bearer ${jwt}`
        }
    })
+ }
+
+ export const setCompleteMachine = (jwt,machineid,userid) => {
+   let obj = {machineid: machineid, userid: userid}
+   console.log("this is conmplete object that will be sent", obj)
+   return axios.post("http://localhost:4000/api/v1/machines/complete",obj)
+ }
+ export const getCompletedMachines = (jwt, userid) => {
+   return axios.get(`http://localhost:4000/api/v1/machines/complete/${userid}`)
+ }
+
+ export const verifyJwtToken = (jwt) => {
+   let obj = {
+      token: jwt
+   }
+   return axios.post("http://localhost:4000/api/v1/users/verify",obj)
  }
