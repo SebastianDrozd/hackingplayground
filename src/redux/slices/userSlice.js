@@ -5,7 +5,8 @@ const initialState = {
     token: "",
     email: "",
     id : "",
-    points : 0
+    points : 0,
+    page : ""
 }
 export const userSlice = createSlice({
     name: 'user',
@@ -18,11 +19,14 @@ export const userSlice = createSlice({
             state.token = action.payload.token
             state.id = action.payload.id
             state.points = action.payload.points
+        },
+        setUserPoints : (state,action) => {
+            state.points = action.payload
         }    
     }
 })
 
 // Action creators are generated for each case reducer function
-export const { setLoggedIn } = userSlice.actions
+export const { setLoggedIn,setUserPoints } = userSlice.actions
 
 export default userSlice.reducer

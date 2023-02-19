@@ -1,0 +1,11 @@
+  <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/home" element={loggedIn ? <HomeWrapper /> : <Login />} >
+          <Route index element={<UserDashboard />} />
+          <Route path="machines" element={<Machines />} />
+          <Route path="machines/:id" element={<HackMachine />} />
+        </Route>
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path ="/sample" element={<GridSample/>} />
+      </Routes>

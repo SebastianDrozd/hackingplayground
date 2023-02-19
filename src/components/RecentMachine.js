@@ -1,11 +1,10 @@
 
 import React from 'react'
 import "../css/RecentMachine.css"
-import moment from 'moment';
 import { useNavigate } from 'react-router-dom';
 const RecentMachine = (props) => {
     const navigate = useNavigate()
-    const {machine} = props
+    const { machine } = props
     let color = ""
     if (machine.difficulty == "easy") { color = "bg-success" }
     else if (machine.difficulty == "medium") { color = "bg-warning" }

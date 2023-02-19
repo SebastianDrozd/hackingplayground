@@ -1,0 +1,9 @@
+.default-dashboard{
+    margin-left: 220px;
+    height: 1000px;
+}
+@media screen and (max-width: 600px) {
+   .default-dashboard{
+       margin-left: 0px;
+   }
+  }

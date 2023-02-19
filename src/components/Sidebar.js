@@ -11,11 +11,9 @@ const Sidebar = () => {
     }
     return (
         <>
-            <div class="sidebar">
-                
+            <div class="sidebar"> 
                 <a class="active" onClick={handleHome} >Home</a>
                 <a onClick={handleMachines} >Machines</a>
-            
             </div>
         </>
     )

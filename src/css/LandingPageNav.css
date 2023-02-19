@@ -1,0 +1,72 @@
+
+.landing-navbar{
+  
+    background-color: #111927;
+}
+.landing-navbar ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: white;
+  }
+  .landing-navbar ul li {
+    display: inline;
+    padding: 1em 2em;
+   
+}
+.landing-navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    font-family: neue-haas-unica,sans-serif;
+}
+.landing-navbar ul li a:hover {
+    color: #9fef00;
+    transition: 0.5s;
+}
+.logo{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.land-button{
+    background-color: #9fef00!important;
+    color: black;
+    border: none;
+    padding: 1em 3em;
+}
+.hamburger{
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+    .dont-show {
+        display: none;
+    }
+    .landing-navbar ul{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .hamburger{
+        display: inline;
+        margin-left: 1em;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .show{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+  }
+  

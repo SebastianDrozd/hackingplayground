@@ -1,17 +1,17 @@
 import axios from 'axios'
+import HEROKU_URL from './endpoints'
 
 export const registerUser = (user) => {
-    console.log("this is object that will be sent", user)
-    return axios.post("http://localhost:4000/api/v1/users/signup",user)
+    return axios.post(`${HEROKU_URL}/api/v1/users/signup`,user)
  }
 
  export const loginUser = (user) => {
-    console.log("this is object that will be sent", user)
-    return axios.post("http://localhost:4000/api/v1/users/login",user)
+    return axios.post(`${HEROKU_URL}/api/v1/users/login`,user)
  }
  
  export const getMachines = (jwt) => {
-      return axios.get("http://localhost:4000/api/v1/machines",{
+   //original http://localhost:4000/api/v1/machines
+      return axios.get(`${HEROKU_URL}/api/v1/machines`,{
          headers: {
                Authorization: `Bearer ${jwt}`
          }
@@ -26,13 +26,24 @@ export const registerUser = (user) => {
       return axios.get(`http://10.0.0.171:2500/api/v1/virtualmachines/start/${name}`)
  }
 
- export const startParrotInstance = () => {
-      return axios.get(`http://10.0.0.171:2500/api/v1/parrot/start`)
+ export const startParrotInstance = (userid) => {
+   
+   const obj = {userid: userid}
+      return axios.post(`http://10.0.0.171:2500/api/v1/parrot/start`,obj)
+ }
+
+ export const stopParrotInstance = (userid,parrotid) => {
+   const obj = {
+      userid: userid,
+      parrotid: parrotid
+   }
+   return axios.post(`http://10.0.0.171:2500/api/v1/parrot/delete`,obj)
  }
 
 
  export const getRecentMachines = (jwt, userid) => {
-      return axios.get(`http://localhost:4000/api/v1/machines/recents/${userid}`,{
+   //original http://localhost:4000/api/v1/machines/recents/${userid}
+      return axios.get(`${HEROKU_URL}/api/v1/machines/recents/${userid}`,{
          headers: {
                Authorization: `Bearer ${jwt}`
          }
@@ -41,8 +52,8 @@ export const registerUser = (user) => {
 
  export const setRecentMachines = (jwt,machineid, userid) => {
    let obj = {machineid: machineid, userid: userid}
-   console.log("this is object that will be sent", obj)
-   return axios.post("http://localhost:4000/api/v1/machines/recents",obj,{
+   //original http://localhost:4000/api/v1/machines/recents
+   return axios.post(`${HEROKU_URL}/api/v1/machines/recents`,obj,{
       headers: { 
           Authorization: `Bearer ${jwt}`
        }
@@ -51,16 +62,60 @@ export const registerUser = (user) => {
 
  export const setCompleteMachine = (jwt,machineid,userid) => {
    let obj = {machineid: machineid, userid: userid}
-   console.log("this is conmplete object that will be sent", obj)
-   return axios.post("http://localhost:4000/api/v1/machines/complete",obj)
+   //original http://localhost:4000/api/v1/machines/complete
+   return axios.post(`${HEROKU_URL}/api/v1/machines/complete`,obj,{
+    headers: {
+          Authorization: `Bearer ${jwt}`
+    }
+ })
  }
  export const getCompletedMachines = (jwt, userid) => {
-   return axios.get(`http://localhost:4000/api/v1/machines/complete/${userid}`)
+   //original http://localhost:4000/api/v1/machines/complete/${userid}
+   return axios.get(`${HEROKU_URL}/api/v1/machines/complete/${userid}`,{
+    headers: {
+          Authorization: `Bearer ${jwt}`
+    }
+ })
  }
 
  export const verifyJwtToken = (jwt) => {
    let obj = {
       token: jwt
    }
-   return axios.post("http://localhost:4000/api/v1/users/verify",obj)
+   //original http://localhost:4000/api/v1/users/verify
+   return axios.post(`${HEROKU_URL}/api/v1/users/verify`,obj)
+ }
+
+ export const getMachineById = (id,jwt) => {
+   //original http://localhost:4000/api/v1/machines/${id}
+   return axios.get(`${HEROKU_URL}/api/v1/machines/${id}`,{
+    headers: {
+          Authorization: `Bearer ${jwt}`
+    }
+ })
+ }
+ export const getActiveParrotMachines = () => {
+   return axios.get(`http://10.0.0.171:2500/api/v1/parrot/active`)
+ }
+ export const setMachineRating = (userid,machineid,rating,jwt)=>{
+   const obj = {
+      userid: userid,
+      machineid: machineid,
+      rating: rating
+   }
+   //original http://localhost:4000/api/v1/machines/like
+   return axios.post(`${HEROKU_URL}/api/v1/machines/like`,obj,{
+    headers: {
+          Authorization: `Bearer ${jwt}`
+    }
+ })
+ }
+
+ export const getMachineRating = (machineid,jwt)=>{
+   //original http://localhost:4000/api/v1/machines/like/${machineid}
+  return axios.get(`${HEROKU_URL}/api/v1/machines/like/${machineid}`,{
+    headers: {
+          Authorization: `Bearer ${jwt}`
+    }
+ })
  }

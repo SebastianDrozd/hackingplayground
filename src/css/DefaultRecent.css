@@ -1,0 +1,73 @@
+.recents-tab {
+    color: white;
+    width: 75%;
+    margin-bottom: 5em;
+    font-family: neue-haas-unica,sans-serif;
+}
+
+.recent-tab-button {
+    background-color: #9fef00 !important;
+    color: black;
+    border: none;
+    padding: 1em 2em;
+    border-radius:1em;
+}
+
+.table-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5em;
+   
+}
+.recents-tab tr{
+    padding: 1em;
+    margin:1em;
+   
+}
+.recents-tab tr:hover {
+    background-color: #2e3a4d;
+}
+.recents-tab th, td {
+    border-bottom: 1px solid #0f0e0e;
+    padding: 1em;
+  }
+.title-recents-tab{
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1em;
+    font-family: neue-haas-unica,sans-serif;
+}
+.row-title{
+    font-weight: 400 !important;
+    font-size: 14px !important;
+}
+.button-machine-list{
+    background-color: #9fef00 !important;
+    color: black;
+    border: none;
+    padding: 1em 2em;
+    border-radius:1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+@media screen and (max-width: 600px) {
+    .table-div{
+        font-size: 10px;
+        overflow-x: auto;
+    }
+    .recents-tab tr{
+        padding: 0em;
+        margin: 0em;
+       
+    }
+    .recents-tab th, td {
+        border-bottom: 1px solid #0f0e0e;
+        padding: 0.5em;
+      }
+}

@@ -1,5 +1,10 @@
 .hackmachine-info-container{
     padding: 1em;
+    color: white;
+}
+.hackmachine-title{
+    color: white;
+    text-align: center;
 }
 .hacker{
     height: 100% !important;
@@ -7,7 +12,8 @@
 .parrot-container{
     padding: 1em;
     margin-left:  5em;
-    margin-top: 2em;
+    margin-top: 5em;
+    margin-bottom: 5em !important;
 }
 .key-div{
     display: flex;
@@ -21,3 +27,174 @@
 .key-div button{
     height: 2.5em !important;
 }
+.hackmachine-top-info{
+
+}
+
+.hackmachine-flex-container{
+    display: flex;
+    flex-direction: row;
+    padding: 2em;
+    justify-content: center;
+    
+}
+.hackmachine-leftside{
+    color: white;
+    font-family: neue-haas-unica,sans-serif;
+    flex: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width:23em;
+    min-height: 22em;
+    background-color: #1e2531;
+    border-radius: 10px;
+
+}
+.hackmachine-rightside{
+    font-family: neue-haas-unica,sans-serif;
+    flex:2fr;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.hackmachine-smallcards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20em;
+    height: 10em;
+    margin-left: 1em;
+    border-radius: 10px;
+    background-color: #1e2531;
+}
+.hackmachine-long-div{}
+.small-user{
+    font-size: 20px;
+    color: #9fef00;
+    padding: 10px;
+}
+.small-owns{
+    font-size: 40px;
+    color: white;
+}
+.small-owns2{
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+.small-owns-p{
+    font-size: 12px;
+    color: white;
+    font-weight: 300;
+    opacity: 0.8;
+}
+.hackmachine-status{
+ 
+    width: 100%;
+    color: red;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+   
+    
+}
+.online{
+    background-color: #9fef00!important;
+    color: black;
+}
+.offline{
+    background-color: #ff3e3e67!important;
+}
+.hackmachine-status p{
+   text-align: center;
+   
+   
+    
+}
+
+.hackmachine-create{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.hackmachine-create:hover{
+    background-color: #242c3a;
+    
+}
+.hackmachine-create i {
+    font-size: 2em;
+    color: #9fef00;
+    margin-right: 1em;
+    cursor: pointer;
+}
+.hackmachine-sub{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hackmachine-review{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.hackmachine-review i {
+    font-size: 2em;
+    color: #e7ef00;
+    margin-right: 1em;
+    cursor: pointer;
+}
+.hackmachine-review-sub{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hackmachine-forum{
+    padding: 10px;
+}
+
+.done{
+    width: 50%;
+    margin: 0 auto;
+}
+.h-sub-p{
+    opacity: 0.7;
+}
+@media screen and (max-width: 600px) {
+  
+    .hackmachine-flex-container{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .h-right{
+       
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2em;
+    }
+    .h-right2{
+        flex-direction: column;
+        align-items: center;    
+        margin-top: 2em;
+    }
+    .hackmachine-smallcards{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 1em;
+    }
+    .parrot-container{
+        width: 100% !important;
+      
+        margin-left: 2em;
+    }
+  }

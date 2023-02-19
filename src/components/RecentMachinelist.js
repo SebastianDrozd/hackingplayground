@@ -5,7 +5,7 @@ import { getRecentMachines } from '../utils/requests'
 import RecentMachine from './RecentMachine'
 const RecentMachinelist = () => {
     const [recentMachines, setRecentMachines] = useState([])
-    const jwt = useSelector(state => state.user.jwt)
+    const jwt = useSelector(state => state.user.token)
     const id = useSelector(state => state.user.id)
     useEffect(() => {
         getRecentMachines(jwt, id).then(res => {
@@ -14,8 +14,6 @@ const RecentMachinelist = () => {
         }).catch(err => {
             console.log(err)
         })
-
-
     }, [])
     return (
         <>
