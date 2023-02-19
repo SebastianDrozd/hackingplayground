@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import {  XAxis, YAxis,ResponsiveContainer, AreaChart, Tooltip, Area } from 'recharts'
-import { grabLineData } from '../utils/promises.js'
+import { grabLineData } from '../utils/promises'
 const ChartComponent = (props) => {
     const filteredMachines = props.completed
     const [isLoading, setIsloading] = useState(true)

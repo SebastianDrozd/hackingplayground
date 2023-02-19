@@ -1,4 +1,4 @@
-const grabLineData = (filteredMachines) => {
+export const grabLineData = (filteredMachines) => {
     return new Promise((resolve, reject) => {
         //set up array of 7 days
         let data = new Array(7);
@@ -48,4 +48,3 @@ const makeMap = (filteredMachines) => {
         resolve(map)
     })
 }
-module.exports = {grabLineData}
