@@ -61,14 +61,19 @@
      display: flex;
      }
      .sidebar2 ul li{
-      font-size: 14px;
+      font-size: 12px;
       padding: 7px;
+     }
+     .sidebar2 ul{
+      margin-left: 0em !important;
      }
      .icon{
       font-size: 12px;
      }
      .top{
       display: inline;
+      padding: 1em;
+    
      }
      .dont-show{
       display: none;
@@ -80,7 +85,7 @@
      }
      .show-nav{
       display: inline;
-     margin-top: 5px;
-      margin-left: 2em;
+      margin-top: 1em;
+      margin-left: 3em;
      }
    }

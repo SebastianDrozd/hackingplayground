@@ -10,7 +10,7 @@ const Machinelist = (props) => {
             <div className="machine-list-container">
                 <div className='machine-table-div'>
                     <h2 className="machine-list-title">Machines List</h2>
-                    <table className='recents-tab'>
+                    <table className='recents-tab hi'>
                         <thead>
                             <tr className='row-title'>
                                 <th className='row-title' role="columnheader" scope="col" aria-label="MACHINE" class="text-start"><span>MACHINE</span></th>

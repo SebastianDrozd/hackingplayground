@@ -60,6 +60,11 @@
     .table-div{
         font-size: 10px;
         overflow-x: auto;
+        width: 80% !important;
+        margin: 0 auto;
+    }
+    .recents-tab{
+       width: 80% !important;
     }
     .recents-tab tr{
         padding: 0em;
@@ -67,7 +72,6 @@
        
     }
     .recents-tab th, td {
-        border-bottom: 1px solid #0f0e0e;
         padding: 0.5em;
       }
 }

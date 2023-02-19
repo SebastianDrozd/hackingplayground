@@ -15,7 +15,7 @@ const DefaultRecent = (props) => {
                     <thead>
                         <tr className='row-title'>
                             <th className='row-title' role="columnheader" scope="col" aria-label="MACHINE" class="text-start"><span>MACHINE</span></th>
-                            <th className='row-title' role="columnheader" scope="col" aria-label="USER RATING" class="text-start"><span>RATING</span></th>
+                            <th className='row-title' role="columnheader" scope="col" aria-label="USER RATING" class="text-start"><span>Description</span></th>
                             <th className='row-title' role="columnheader" scope="col" aria-label="RATING" class="text-start"><span>DIFFICULTY</span></th>
                             <th className='row-title' role="columnheader" scope="col" aria-label="USER OWNS" class="text-start"><span>LAST USED</span></th>
                             <th className='row-title' role="columnheader" scope="col" aria-label="SYSTEM OWNS" class="text-start"><span>SYSTEM OWNS</span></th>

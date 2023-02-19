@@ -64,26 +64,30 @@ ol li{
     .machine-notice-container{
        margin-top: 7em;
         width: 100%;
-  
+        height: 100%;
     }
     .user-title{
         display: none;
     }
     .machine-table-div {
      font-size: 10px; 
-     width: 90%;
      margin: 0 auto;
      margin-top:10em;
+     overflow-x: auto;
     }
     .machine-list-container{
         margin-top: 2em !important;
+      
     }
     .machine-table-div table td{
         padding: 0.5em;
         width: 1em;
     }
     .machine-table-div table th{
-        padding: 0.5em;
+        padding: 1em;
         width: 1em;
+    }
+    .hi{
+        width: 75% !important;
     }
   }
